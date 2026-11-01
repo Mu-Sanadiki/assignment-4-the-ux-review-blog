@@ -1,0 +1,1348 @@
+/* ==================================================
+   THE UX REVIEW - MAIN STYLESHEET
+   ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background setup for Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fef08a; /* Bright pastel yellow background */
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+
+/* Navbar Wrapper (Fixed at top) */
+.navbar-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+/* Main Navbar Inner Box */
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 0px 4px 0px #000000; */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #000000;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff6b00; /* Vibrant orange color for "Review" */
+}
+
+/* Navigation Links Container */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.star-separator {
+  color: #d1d5db;
+  font-size: 0.75rem;
+}
+
+/* Subscribe Button with Hover Offset Effect */
+.btn-subscribe {
+  text-decoration: none;
+  background-color: #ffd05b;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 8px 18px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  /* box-shadow: 2px 2px 0px #000000; */
+  transition: all 0.15s ease-in-out;
+  display: inline-block;
+}
+
+/* Navigation Links Hover Effect */
+.nav-link:hover {
+  color: #ff7a59; /* Bright orange hover color */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover Reflection & Downward Shift Effect */
+.btn-subscribe:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+  background-color: #e5ba33; /* Slightly darker yellow, matching the original design */
+}
+/* Hero Section Layout */
+.hero-section {
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+/* Left Content Styles */
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* Trending Badge */
+.trending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 6px 14px;
+  border-radius: 0px; /* Remove rounded corners for sharp edges */
+  transform: rotate(-3deg); /* Rotation angle matching the original design */
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 0px #000000; /* Sharp solid black shadow */
+  width: fit-content;
+}
+
+/* Headline Typography with Text Shadows */
+.hero-title {
+  font-family: "Exo", sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 90px;
+  color: #000000;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+}
+.hero-title,
+h1 {
+  font-family: "Exo", sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 90px;
+  color: #000000;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+.text-red {
+  color: #ff3333;
+  text-shadow: 3px 3px 0px #000000;
+}
+
+.text-blue {
+  color: #1e66ff;
+  text-shadow: 3px 3px 0px #000000;
+}
+
+/* Description Box */
+.hero-description-card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  padding: 16px 24px;
+  max-width: 580px;
+  box-shadow: 6px 6px 0px #000000;
+  margin-bottom: 30px;
+}
+
+.hero-description-card p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #000000;
+  margin: 0;
+}
+
+/* CTA Buttons Styling */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 14px 24px;
+  border: 3px solid #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-black {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 4px 4px 0px #040101;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Buttons Hover Effects */
+.btn-black:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #010101;
+}
+
+.btn-white:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Right Image Card Styles */
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  max-width: 520px;
+  cursor: pointer;
+  /* Apply the transition to the entire parent container */
+  transition: transform 0.2s ease;
+}
+
+/* Hover movement applied to the entire parent container */
+.hero-image-wrapper:hover {
+  transform: translate(-5px, -5px);
+}
+
+.image-card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  padding: 0;
+  box-shadow: 8px 8px 0px #000000;
+  transform: rotate(1.5deg);
+  overflow: hidden;
+  height: 320px;
+  display: block;
+  /* Increase the shadow on hover */
+  transition: box-shadow 0.2s ease;
+}
+
+/* Increase the shadow on hover */
+.hero-image-wrapper:hover .image-card {
+  box-shadow: 13px 13px 0px #000000;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.featured-badge {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background-color: #ff334b;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 6px 16px;
+  border: 2px solid #000000;
+  transform: rotate(5deg);
+  z-index: 10;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.bg-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shape-left {
+  width: 90px;
+  height: 90px;
+  top: 15%;
+  left: 2%;
+  transform: rotate(12deg);
+  background-color: #f3ab5ad0;
+  opacity: 0.7;
+}
+
+.shape-right {
+  width: 100px;
+  height: 100px;
+  top: 25%;
+  right: 3%;
+  transform: rotate(45deg);
+  background-color: #f3ab5ad0;
+  opacity: 0.8;
+}
+
+/* Main Layout & Container */
+.main-content-section {
+  background-color: #f8f9fa;
+  border-top: 3px solid #000000bf;
+  border-bottom: 3px solid #000000;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.articles-area {
+  flex: 2;
+}
+
+.sidebar-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+/* Section Title */
+.section-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.fresh-badge {
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Article Cards Base Style */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-card {
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+/* Article Card Background Fix */
+.article-card,
+.article-card:last-child,
+.article-card:nth-child(3) {
+  background-color: #ffffff !important;
+}
+/* Card Hover Shift & Shadow Effect */
+.article-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px #000000;
+}
+
+/* Article Title Transition */
+.article-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+/* Specific Title Hover Colors based on Card Class */
+.card-red:hover .article-title {
+  color: #ff3333; /* First article: red */
+}
+
+.card-blue:hover .article-title {
+  color: #1e66ff; /* Second article: blue */
+}
+
+.card-purple:hover .article-title {
+  color: #a855f7; /* Third article: purple */
+}
+
+.article-thumb {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  border: 2px solid #000;
+  flex-shrink: 0;
+  background: #e0f2fe;
+}
+
+.article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 2px 6px;
+  border: 1.5px solid #000;
+  color: #fff;
+  transform: rotate(5deg);
+}
+
+.badge-red {
+  background: #ff3333;
+}
+
+.badge-blue {
+  background: #1e66ff;
+}
+
+.badge-purple {
+  background: #a855f7;
+}
+
+/* Article Details */
+.article-info {
+  flex: 1;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border: 1.5px solid #000;
+  margin-bottom: 6px;
+}
+
+.tag-yellow {
+  background: #fef08a;
+}
+
+.tag-green {
+  background: #bbf7d0;
+}
+
+.tag-pink {
+  background: #fbcfe8;
+}
+
+.article-desc {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.article-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.article-meta .likes {
+  margin-left: auto;
+  color: #ff3333;
+}
+
+/* Load More Button */
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-load-more {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 12px 24px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #707070;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s;
+}
+
+.btn-load-more:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #707070;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 20px;
+}
+
+.widget-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  border-bottom: 3px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Trending List */
+.trending-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trending-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.trending-num {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.num-red {
+  color: #ff3333;
+}
+
+.num-blue {
+  color: #1e66ff;
+}
+
+.num-purple {
+  color: #a855f7;
+}
+
+.trending-list h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.trending-list p {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Category Buttons */
+.category-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat-item {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border: 2px solid #000;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.cat-yellow {
+  background-color: #fef9c3;
+}
+
+.cat-green {
+  background-color: #dcfce7;
+}
+
+.cat-pink {
+  background-color: #fce7f3;
+}
+
+.cat-blue {
+  background-color: #dbeafe;
+}
+
+.cat-purple {
+  background-color: #f3e8ff;
+}
+
+.cat-yellow:hover {
+  background-color: #fde047;
+}
+
+.cat-green:hover {
+  background-color: #86efac;
+}
+
+.cat-pink:hover {
+  background-color: #f472b6;
+}
+
+.cat-blue:hover {
+  background-color: #60a5fa;
+}
+
+.cat-purple:hover {
+  background-color: #c084fc;
+}
+
+.cat-item:hover {
+  box-shadow: 4px 4px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+/* ==================================================
+   AUTHORS SECTION
+   ================================================== */
+.authors-section {
+  background-color: #ffd000;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+/* Base Styles for Background Shapes */
+.author-bg-shape {
+  position: absolute;
+  background-color: #e6b800;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 1. Top-right square */
+.shape-top-right {
+  top: 50px;
+  right: 50px;
+  width: 220px;
+  height: 220px;
+  transform: rotate(45deg);
+}
+
+/* 2. Bottom-left square */
+.shape-bottom-left {
+  bottom: 30px;
+  left: 30px;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-15deg);
+}
+
+.authors-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Styling */
+.authors-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.authors-header .header-line,
+.authors-header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 8px;
+  background-color: #000;
+  margin: 15px auto 0 auto;
+  transform: rotate(1deg); /* Adjusted rotation angle */
+}
+.authors-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.authors-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Cards Grid */
+.authors-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Author Card Basic Style */
+.author-card {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 330px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 30px 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.author-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #000;
+}
+
+/* Card Background Color Variations */
+.card-yellow {
+  background-color: #fff8c5;
+}
+
+.card-green {
+  background-color: #e0ffe8;
+}
+
+.card-purple {
+  background-color: #fbe4ff;
+}
+
+/* Badge (Top-Right Angle) */
+.author-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff;
+  padding: 4px 10px;
+  border: 2px solid #000;
+  transform: rotate(12deg);
+  box-shadow: 2px 2px 0px #000;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.badge-red {
+  background-color: #ff3333;
+}
+
+.badge-blue {
+  background-color: #1a73e8;
+}
+
+.badge-purple {
+  background-color: #a100ff;
+}
+
+/* Avatar Image */
+.author-avatar {
+  width: 110px;
+  height: 110px;
+  border: 3px solid #000;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Typography Inside Card */
+.author-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #000;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.author-role {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.author-bio {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+/* Social Icons Base Style */
+.author-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0px 0px 0px #000;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+}
+
+/* Base Hover Effect (Cube Elevation + Shadow) */
+.social-icon:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+/* Individual Social Media Colors On Hover */
+.social-icon.twitter:hover {
+  background-color: #1da1f2; /* Twitter / X blue */
+  color: #fff;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #0a66c2; /* LinkedIn blue */
+  color: #fff;
+}
+
+.social-icon.instagram:hover {
+  background-color: #e1306c; /* Instagram pink / purple */
+  color: #fff;
+}
+
+/* Author Name Hover Effects Per Card */
+.card-yellow:hover .author-name {
+  color: #ff3333;
+}
+
+.card-green:hover .author-name {
+  color: #1a73e8;
+}
+
+.card-purple:hover .author-name {
+  color: #a100ff;
+}
+/* ==================================================
+   COMMUNITY SECTION
+   ================================================== */
+.community-section {
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+  border-top: 4px solid #000;
+}
+
+.community-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.community-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.community-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.community-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Decorative Slanted Line */
+.header-line {
+  width: 130px;
+  height: 8px;
+  background-color: #000;
+  margin: 0 auto;
+  transform: rotate(-1deg);
+}
+
+/* Grid Layout */
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Left Side Content */
+.community-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.left-title {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+/* Info Card */
+.info-card {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 24px 22px;
+  box-shadow: 4px 4px 0px #000;
+  margin-bottom: 35px; /* More spacing between the box and the list */
+}
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Features List (Single Line Items) */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0; /* More spacing above the Join button */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.92rem; /* Slightly smaller font to fit on one line */
+  font-weight: 600; /* Regular/medium weight matching the original */
+  color: #111;
+  white-space: nowrap; /* يمنع نزول الكلام لسطر ثاني */
+}
+.icon-box {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid #000;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.box-red {
+  background-color: #ff3333;
+}
+.box-blue {
+  background-color: #1a73e8;
+}
+.box-purple {
+  background-color: #a100ff;
+}
+.box-green {
+  background-color: #00c853;
+}
+/* Right Side Testimonials Background Colors (Matching the original design) */
+.testimonial-card:nth-child(2) {
+  background-color: #fde8e8; /* Light pink for the first card */
+}
+
+.testimonial-card:nth-child(3) {
+  background-color: #f0f7ff; /* Light blue for the second card */
+}
+
+.testimonial-card:nth-child(4) {
+  background-color: #fbf5ff; /* Light purple for the third card */
+}
+/* Join Button */
+/* Join Button Base Style (Raised Up) */
+.btn-join {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-decoration: none;
+  border: 2px solid #000;
+  /* Raised up and to the left with a solid shadow */
+  transform: translate(-5px, -5px);
+  box-shadow: 6px 6px 0px #000;
+  transition: all 0.15s ease-in-out;
+  width: fit-content;
+}
+
+/* Hover Effect (Pressed Down) */
+.btn-join:hover {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px #000;
+  background-color: #111;
+}
+/* Right Side Testimonials Box */
+.testimonials-wrapper {
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 30px 20px;
+  box-shadow: 6px 6px 0px #000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonials-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-card {
+  background-color: #fcfcfc;
+  border: 2px solid #000;
+  padding: 18px;
+}
+
+.testimonial-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #000;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: #666;
+  font-weight: 600;
+  display: block;
+}
+/* ==================================================
+   FOOTER SECTION
+   ================================================== */
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0 35px;
+  font-family: "Exo", sans-serif;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+/* --- Brand Section --- */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.brand-icon {
+  background-color: #ffffff;
+  color: #000000;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.brand-header h2 {
+  font-family: "Exo", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #ffffff;
+  max-width: 340px;
+  margin: 0;
+}
+
+/* --- Section Headings --- */
+.footer-categories h3,
+.footer-newsletter h3 {
+  font-family: "Exo", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 22px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* --- Categories Links + Yellow Hover Effect --- */
+.footer-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-categories a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Exo", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  transition: color 0.15s ease-in-out;
+  display: inline-block;
+}
+
+/* Links turn bright yellow on hover */
+.footer-categories a:hover {
+  color: #ffea00;
+}
+
+/* --- Newsletter Section --- */
+.footer-newsletter p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  max-width: 340px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 340px;
+}
+
+.newsletter-form input {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  padding: 13px 15px;
+  color: #ffffff;
+  font-family: "Exo", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  outline: none;
+  border-radius: 0;
+}
+
+.newsletter-form input::placeholder {
+  color: #888888;
+}
+
+/* ==================================================
+   FOOTER SUBSCRIBE BUTTON
+   ================================================== */
+.footer-subscribe-btn {
+  background-color: #ffea00;
+  color: #000000;
+  border: none;
+  border-radius: 0; /* Sharp rectangular corners */
+  padding: 13px;
+  font-family: "Exo", sans-serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: 100%;
+  box-shadow: none;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+/* Footer button hover: moves down and becomes slightly darker */
+.footer-subscribe-btn:hover {
+  background-color: #e5d200; /* Slightly darker yellow */
+  transform: translateY(3px); /* Move downward */
+}
+
+/* --- Bottom Line & Footer Links --- */
+.footer-divider {
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin: 0;
+  font-family: "Exo", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Exo", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 900;
+  transition: color 0.15s ease-in-out;
+}
+
+/* Footer bottom links turn yellow on hover */
+.footer-links a:hover {
+  color: #ffea00;
+}
